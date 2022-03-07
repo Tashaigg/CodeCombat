@@ -1,0 +1,6 @@
+hero.moveDown()
+hero.moveDown()
+hero.moveRight()
+hero.moveUp()
+hero.moveRight()
+
