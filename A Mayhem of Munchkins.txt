@@ -1,0 +1,4 @@
+# Inside a while-true loop, use findNearestEnemy() and attack!
+while True:
+    ene = hero.findNearestEnemy()
+    hero.attack(ene)
