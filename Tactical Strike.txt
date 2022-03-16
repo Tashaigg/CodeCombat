@@ -1,0 +1,8 @@
+# Defeat the ogres.
+hero.moveDown()
+enemy = hero.findNearestEnemy()
+hero.attack(enemy)
+enemy = hero.findNearestEnemy()
+hero.attack(enemy)
+hero.moveRight(2)
+hero.moveDown()
