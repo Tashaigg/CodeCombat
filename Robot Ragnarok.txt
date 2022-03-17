@@ -1,0 +1,20 @@
+# The robot ragnarok is upon us!
+# Dodge the incoming plasma balls for 15 seconds.
+
+hero.moveUp()
+hero.moveUp()
+hero.moveDown()
+
+hero.wait(0.2)
+hero.moveLeft()
+
+hero.moveDown()
+hero.moveRight(3)
+hero.moveUp(2)
+hero.moveLeft(3)
+
+hero.moveDown(4)
+hero.moveRight(3)
+hero.moveUp(4)
+hero.moveLeft(3)
+hero.moveDown(4)
