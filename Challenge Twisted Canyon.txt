@@ -1,0 +1,21 @@
+# Escape from the maze by moving to the X mark.
+# Try to collect as many coins as you can.
+
+hero.attack('Treasure Chest')
+hero.moveRight()
+
+hero.moveLeft(2)
+hero.moveDown()
+hero.attack("Door")
+hero.moveRight(5)
+hero.moveLeft(2)
+while True:
+    hero.moveUp(2)
+    enemy = hero.findNearestEnemy()
+    hero.attack(enemy)
+    hero.moveLeft(2)
+    hero.moveRight(2)
+    hero.moveDown()
+    hero.moveRight()
+    hero.moveUp()
+    hero.moveRight()
