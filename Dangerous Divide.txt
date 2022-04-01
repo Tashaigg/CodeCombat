@@ -1,0 +1,25 @@
+<!-- The <div> tag is for grouping information. -->
+<!-- Use <div> tags to organize pieces of your website. -->
+
+
+<!-- Below, each blog post is contained inside a <div> -->
+<div>
+    <h2>Ogretober 3st, 1404</h2>
+    <p>
+        I met a new enemy today! Her name is Cindy and she shot my ogre allies from afar. I dislike her and her arrows.
+    </p>
+    <img src="/file/db/thang.type/529ab1a24b67a988ad000002/portrait.png">
+</div>
+<!-- Add another <div> below: -->
+<div>
+    <!-- Add an <h2> tag to title the blog post: -->
+    <h2>
+    Itens are way too expensive
+    </h2>
+    <!-- Add a <p> tag to give the blog post content: -->
+    <p>
+    The amount of gold earned is way too small tokeep up with the amount of exp earned
+    </p>
+    <img src="https://codecombat.com/file/db/thang.type/535ef031c519160709f2f63a/portrait.png">
+    <img src="https://codecombat.com/file/db/thang.type/52aa3b9eccbd588d4d000003/portrait.png"/>
+</div>
