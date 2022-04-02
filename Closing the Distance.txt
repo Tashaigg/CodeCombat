@@ -12,3 +12,5 @@ enemy1 = hero.findNearestEnemy()
 # Now attack enemy1.
 hero.attack(enemy1)
 hero.moveRight()
+
+
