@@ -1,0 +1,9 @@
+# Use your buildXY hammer to build two "fire-trap"s near the gate.
+# They will detonate when you move back to a safe distance!
+# Then, make a run for the forest!
+hero.moveRight(2)
+hero.buildXY("fire-trap", 36, 36)
+hero.buildXY("fire-trap", 36, 29)
+hero.moveLeft(2)
+hero.moveRight(5)
+
