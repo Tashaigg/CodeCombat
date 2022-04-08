@@ -1,0 +1,22 @@
+# Help your friends beat the minions that Thoktar sends against you.
+# You'll need great equipment and strategy to win.
+# Flags might help, but it's up to you–be creative!
+# There is a doctor behind the fence. Move to the X to get healed!
+
+while True:
+    g = hero.findFlag("green")
+    v = hero.findFlag("violet")
+    b = hero.findFlag("black")
+    enemy = hero.findNearestEnemy()
+    if g:
+        hero.pickUpFlag(g)
+    elif b and hero.canCast("time-travel", hero):
+        hero.pickUpFlag(b)
+        hero.cast("time-travel", hero)
+    elif v and hero.canCast("chain-lightning", enemy) and enemy:
+        hero.pickUpFlag(v)
+        hero.cast("chain-lightning", enemy)
+    elif enemy:
+        hero.attack(enemy)
+
+
