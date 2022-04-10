@@ -1,0 +1,24 @@
+# Defeat as many ogres as you can.
+# Use 'cast' and 'canCast' for spells.
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        dist = hero.distanceTo(enemy)
+        if enemy.type == "ogre":
+            hero.moveXY(10, 36)
+        
+        if hero.canCast("chain-lightning", enemy):
+            if dist<30:
+                hero.cast("chain-lightning", enemy)
+        
+        if hero.canCast("lightning-bolt", enemy):
+            if dist>40:
+                hero.cast("lightning-bolt", enemy)
+        
+        if dist<40:
+            hero.attack(enemy)
+    
+    else:
+        if hero.canCast("regen", hero):
+            hero.cast("regen", hero)
+
