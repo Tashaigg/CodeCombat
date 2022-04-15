@@ -1,0 +1,18 @@
+# You can add strings together, and add numbers into strings.
+# Sing along, using string concatenation:
+# X potions of health on the wall!
+# X potions of health!
+# Take Y down, pass it around!
+# X-Y potions of health on the wall.
+
+X = 10
+Y = 1
+while True:
+    hero.say(X +' potions of health on the wall!')
+    # Sing the next line:
+    hero.say(X +' potions of health!')
+    # Sing the next line:
+    hero.say("Take "+Y+" down, pass it around!")
+    X -= Y
+    # Sing the last line:
+    hero.say(X + " potions of health on the wall.")
