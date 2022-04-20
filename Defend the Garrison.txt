@@ -1,0 +1,18 @@
+# Defeat all of the attacking ogres.
+# Use flags to move away from dangerous ogres.
+
+while True:
+    g = hero.findFlag("green")
+    v = hero.findFlag("violet")
+    b = hero.findFlag("black")
+    enemy = hero.findNearestEnemy()
+    if g:
+        hero.pickUpFlag(g)
+    elif b and hero.isReady("cleave") and enemy:
+        hero.pickUpFlag(b)
+        hero.cleave(enemy)
+    elif v and hero.canCast("chain-lightning", enemy) and enemy:
+        hero.pickUpFlag(v)
+        hero.cast("chain-lightning", enemy)
+    elif enemy:
+        hero.attack(enemy)
