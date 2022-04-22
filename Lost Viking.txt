@@ -1,0 +1,83 @@
+hero.wait(1)# You MUST click on the HELP button to see a detailed description of this level!
+
+# The raven will tell you what to use for your maze parameters!
+
+# How many sideSteps north of the Red X you've taken.
+sideSteps = 1
+
+# How many steps east of the Red X you've taken.
+steps = 1
+
+# Multiply this with steps to determine your X coordinate. DON'T CHANGE THIS!
+X_PACE_LENGTH = 4
+
+# Multiply this with sideSteps to determine your Y coordinate. DON'T CHANGE THIS!
+Y_PACE_LENGTH = 6
+
+# The maze is 35 steps along the X axis.
+while steps <= 35:
+
+    # Take the next step:
+    hero.moveXY(steps * X_PACE_LENGTH, sideSteps * Y_PACE_LENGTH)
+
+    # Increment steps and sideSteps as appropriate, taking into account the special rules.
+    steps += 1
+    if steps <= 6:
+        sideSteps += 1
+    if steps > 6 and steps <= 11:
+        sideSteps -= 1
+    if steps == 12:
+        sideSteps += 5
+    if steps == 14:
+        sideSteps -= 4
+    if steps > 15 and steps <= 18:
+        sideSteps += 1
+    if steps > 18 and steps <= 22:
+        sideSteps -= 1
+    if steps > 22 and steps <= 23:
+        sideSteps += 6
+    if steps == 24:
+        sideSteps -= 1
+    if steps > 24 and steps < 27:
+        sideSteps += 1
+    if steps == 27:
+        sideSteps -= 7
+    if steps > 27 and steps < 31:
+        sideSteps += 1
+    if steps > 30 and steps < 34:
+        sideSteps -= 1
+    if steps == 34:
+        sideSteps += 6
+    if steps > 34 and steps < 40:
+        sideSteps -= 1
+    
+'''
+hero.moveXY(24, 35)#cima 1
+hero.moveXY(44, 7)# baixo 2
+hero.moveXY(49, 40)# cima 2
+hero.moveXY(56, 7)# baixo 3
+hero.moveXY(72, 30)
+hero.moveXY(88, 7)
+
+
+hero.moveXY(1, 1)
+SLIDE = 8
+SWITCH = 6
+SKIP = 11
+
+enemy=hero.findNearestEnemy()
+hero.moveXY(1, 1)
+hero.attack(enemy)
+hero.attack(enemy)
+hero.attack(enemy)
+hero.attack(enemy)
+hero.attack(enemy)
+hero.moveXY(2, 6)
+enemy=hero.findNearestEnemy()
+hero.moveXY(15, 1)
+hero.attack(enemy)
+hero.moveXY(1, 1)
+hero.wait(3)
+hero.moveXY(25, 30)
+hero.moveXY(150, 35)
+'''
