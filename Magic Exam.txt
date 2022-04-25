@@ -1,0 +1,105 @@
+# Try to get the best grade (gold) at the magic exam.
+# Move to each X mark, then use a spell.
+
+
+
+hero.moveXY(18, 40)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("force-bolt", enemy):
+        hero.cast("force-bolt", enemy)
+if item:
+    hero.say(item.type)
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("heal", friend):
+        hero.cast("heal", friend)
+
+hero.moveXY(18, 24)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("force-bolt", enemy):
+        hero.cast("force-bolt", enemy)
+if item:
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("heal", friend):
+        hero.cast("heal", friend)
+
+hero.moveXY(34, 24)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("shrink", enemy):
+        hero.cast("shrink", enemy)
+if item:
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("grow", friend):
+        hero.cast("grow", friend)
+hero.moveXY(34, 40)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("shrink", enemy):
+        hero.cast("shrink", enemy)
+if item:
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("grow", friend):
+        hero.cast("grow", friend)
+
+hero.moveXY(50, 40)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("poison-cloud", enemy):
+        hero.cast("poison-cloud", enemy)
+if item:
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("regen", friend):
+        hero.cast("regen", friend)
+
+hero.moveXY(50, 24)
+enemy = hero.findNearestEnemy()
+item = hero.findNearestItem()
+friend = hero.findNearestFriend()
+if enemy:
+    if hero.canCast("poison-cloud", enemy):
+        hero.cast("poison-cloud", enemy)
+if item:
+    hero.moveXY(item.pos.x, item.pos.y)
+if friend:
+    if hero.canCast("regen", friend):
+        hero.cast("regen", friend)
+
+hero.moveXY(66, 24)
+item = hero.findNearestItem()
+if item:
+    hero.say(item.type)
+    if item.type == "potion":
+        hero.moveXY(item.pos.x, item.pos.y)
+    else:
+        hero.cast("grow", hero)
+        hero.moveXY(item.pos.x, item.pos.y)
+
+hero.moveXY(66, 40)
+item = hero.findNearestItem()
+if item:
+    hero.say(item.type)
+    if item.type == "potion":
+        hero.moveXY(item.pos.x, item.pos.y)
+    else:
+        hero.cast("grow", hero)
+        hero.moveXY(item.pos.x, item.pos.y)
+
+hero.moveXY(65, 38)
+hero.moveXY(41, 35)
