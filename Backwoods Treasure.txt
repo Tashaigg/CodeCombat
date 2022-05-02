@@ -1,0 +1,18 @@
+# Collect 100 gold from two or three groves.
+while True:
+    
+    flag = hero.findFlag()
+    item = hero.findNearestItem()
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if hero.canCast("chain-lightning", enemy):
+            hero.cast("chain-lightning", enemy)
+        else:
+            hero.attack(enemy)
+    
+    elif flag:
+        hero.moveXY(flag.pos.x, flag.pos.y)
+        hero.pickUpFlag(flag)
+    elif item:
+        hero.moveXY(item.pos.x, item.pos.y)
+
