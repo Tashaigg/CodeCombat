@@ -1,0 +1,19 @@
+# Soldiers will slowly arrive, but the ogres will overwhelm them.
+# A basic attack loop isn't going to be enough to keep you alive.
+while True:
+    g = hero.findFlag("green")
+    b = hero.findFlag("black")
+    v = hero.findFlag("violet")
+    enemy = hero.findNearestEnemy()
+    if g:
+        hero.pickUpFlag(g)
+    elif b:
+        if hero.isReady("cleave"):
+            hero.pickUpFlag(b)
+            hero.cleave(enemy)
+    elif v and enemy:
+        if hero.canCast("chain-lightning", enemy):
+            hero.pickUpFlag(v)
+            hero.cast("chain-lightning", enemy)
+    elif enemy:
+        hero.attack(enemy)
