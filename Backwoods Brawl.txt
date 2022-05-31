@@ -1,0 +1,57 @@
+
+while True:
+    flag = hero.findFlag()
+    enemy = hero.findNearestEnemy()
+    
+    if enemy and hero.canCast("chain-lightning", enemy):
+        hero.cast("chain-lightning", enemy)
+    elif enemy:
+        hero.attack(enemy)
+
+
+'''
+while True:
+    flag = hero.findFlag()
+    enemy = hero.findNearestEnemy()
+    if hero.pos.y != 51:
+        if hero.canCast("chain-lightning", enemy):
+            hero.cast("chain-lightning", enemy)
+        hero.moveXY(60, 51)
+    else:
+        if flag:
+            hero.pickUpFlag(flag)
+        elif enemy:
+            hero.attack(enemy)
+'''
+
+'''
+def att():
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if hero.canCast("chain-lightning", enemy):
+            hero.cast("chain-lightning", enemy)
+        else:
+            hero.attack(enemy)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+while True:
+    att()
+    hero.moveXY(60, 50)
+    att()
+    hero.moveXY(60, 40)
+    att()
+    hero.moveXY(50, 30)
+    att()
+    hero.moveXY(50, 20) #bottom
+    att()
+    hero.moveXY(50, 30)
+    att()
+    hero.moveXY(60, 40)
+    att()
+    hero.moveXY(60, 50)
+'''
+
