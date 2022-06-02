@@ -1,0 +1,6 @@
+# Patrol the village entrances.
+# If you find an enemy, attack it.
+while True:
+    leftEnemy = hero.findNearestEnemy()
+    if leftEnemy:
+        hero.attack(leftEnemy)
