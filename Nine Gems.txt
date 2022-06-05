@@ -1,0 +1,6 @@
+# Collect all the gems in 4 moveXY's or less!
+# Programmers need to think creatively!
+hero.moveXY(18, 24)
+hero.moveXY(57, 61)
+hero.moveXY(57, 23)
+hero.moveXY(32, 48)
