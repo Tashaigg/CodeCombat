@@ -1,0 +1,15 @@
+# Stay alive for two minutes.
+# If you win, it gets harder (and more rewarding).
+# If you lose, you must wait a day before you can resubmit.
+# Remember, each submission gets a new random seed.
+
+while True:
+    flag = hero.findFlag()
+    if flag:
+        if flag.color is "green":
+            hero.moveXY(flag.pos.x, flag.pos.y)
+            hero.pickUpFlag(flag)
+    else:
+        enemy = hero.findNearestEnemy()
+        if enemy and enemy.type != 'SAND-YAK':
+            hero.attack(enemy)
