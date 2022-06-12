@@ -1,0 +1,8 @@
+# Save the village by blocking the path of the incoming sand yak herd.
+# Move closer to the red X.
+# Build a fence at the red X.
+
+hero.moveXY(52, 23)
+hero.moveXY(12, 28)
+hero.moveXY(14, 54)
+hero.buildXY("fence", 38, 51)
