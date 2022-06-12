@@ -1,0 +1,24 @@
+# Accumulate 300 gold and escape from the dungeon.
+
+def onSpawn(event):
+    # Send the pet to walk around the dungeon:
+    pet.moveXY(21, 14)
+    pet.moveXY(71, 12)
+    pet.moveXY(71, 60)
+    pet.moveXY(21, 60)
+    # Don't forget to return it to the hero:
+    pet.moveXY(20, 27)
+    pass
+
+pet.on("spawn", onSpawn)
+
+while True:
+    # Guard peasants:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.attack(enemy)
+    # When you have 300+ gold move to the red mark:
+    if hero.gold >300:
+        hero.moveXY(50, 34)
+    
+    pass
