@@ -1,0 +1,27 @@
+# Collect the treasure and escape.
+
+# Prepare the hero and the pet.
+pet.moveXY(28, 27)
+# Distract the skeleton.
+# Sneak while the skeleton is distracted.
+
+hero.moveXY(6, 21)
+pet.distractionNoise()
+
+hero.moveXY(16, 30)
+hero.backstab(hero.findNearestEnemy())
+
+hero.moveXY(9, 47)
+hero.moveXY(46, 48)
+hero.moveXY(46, 36)
+
+# Repeat this maneuver to get the treasure:
+pet.moveXY(64, 28)
+pet.distractionNoise()
+hero.moveXY(46, 17)
+hero.moveXY(65, 9)
+hero.moveXY(70, 9)
+hero.moveXY(46, 17)
+pet.distractionNoise()
+# Escape from the dungeon (the red mark):
+hero.moveXY(40, 56)
