@@ -1,0 +1,13 @@
+# Go to the far right edge of the level to find new areas.
+# Check the guide for more details.
+while True:
+    flag = hero.findFlag()
+    danger = hero.findNearestEnemy()
+    if flag:
+        if flag.color is "green":
+            hero.moveXY(flag.pos.x, flag.pos.y)
+        hero.pickUpFlag(flag)
+    if danger:
+        if danger.type != "sand-yak":
+            enemy = danger
+            hero.attack(enemy)
